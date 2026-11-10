@@ -40,3 +40,16 @@ The description follows the template: **Why** (the problem, or `Closes #123`),
 showed), and **Risk and rollback**. Automated pull requests follow the same
 title rule: Dependabot uses `chore(deps)`, and releases use
 `chore(release): version packages`.
+
+## Size and shape of code
+
+Linting enforces limits so the code grows in small, named pieces:
+
+- at most 400 lines per file and 80 per function, not counting blank lines and
+  comments;
+- complexity at most 15, nesting at most 4 deep, and at most 4 parameters
+  (pass an object instead);
+- lines at most 80 characters, by Prettier.
+
+Tests are exempt from the size limits. When a file nears a limit, split it by
+what each part does rather than raising the limit.
