@@ -1,13 +1,12 @@
-## Decide what an AI agent may do before it does it
+# Agent Policy Format
 
-Nodrail checks each action an AI agent attempts against your team's rules: allow
-it, deny it, or ask a person. Anything no rule covers waits until a person
-allows it, and every decision is recorded.
+APF is an open YAML format for AI agent permissions, maintained by Nodrail. Keep rules alongside your code and test what an agent may do before wiring the decision into its tool calls.
 
-| Repository                                                    | What it's for                                                                                                          |
-| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| [**nodrail-js**](https://github.com/Nodrail/nodrail-js)       | TypeScript SDK for LangChain, the Vercel AI SDK, OpenAI Agents and any tool-calling agent, plus the open policy engine |
-| [**agent-plugins**](https://github.com/Nodrail/agent-plugins) | Plugins for Claude Code and Codex: no code, two commands                                                               |
+| If you want to…                                           | Start here                                                                                                                        |
+| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Try a policy locally and connect it to Claude Code        | [Local quickstart](https://nodrail.com/docs/quickstart)                                                                           |
+| Use the evaluator in your own harness                     | [Library guide](https://nodrail.com/docs/library)                                                                                 |
+| Implement compatible policy decisions                     | [Evaluator test cases](https://github.com/Nodrail/nodrail-js/blob/main/packages/policy-engine/tests/fixtures/conformance-v1.json) |
+| Connect Claude Code or Codex to shared workspace policies | [Cloud plugins](https://github.com/Nodrail/agent-plugins)                                                                         |
 
-Everything here is open source under Apache-2.0. [nodrail.com](https://nodrail.com) ·
-security reports: see each repository's `SECURITY.md`.
+The [engine and TypeScript client](https://github.com/Nodrail/nodrail-js) are available under Apache-2.0. [Nodrail Cloud](https://nodrail.com/pricing) provides shared approvals and decision history for teams. See each repository’s `SECURITY.md` for private vulnerability reporting.
